@@ -11,6 +11,11 @@ exports.TelegramErrorHandlerModule = void 0;
 const common_1 = require("@nestjs/common");
 const telegram_error_handler_service_1 = require("./telegram-error-handler.service");
 let TelegramErrorHandlerModule = TelegramErrorHandlerModule_1 = class TelegramErrorHandlerModule {
+    /**
+     * Configures and initializes the TelegramErrorHandlerModule.
+     * @param token The token obtained from the Telegram bot https://t.me/tel_error_handler_bot
+     * @returns A DynamicModule configured with the provided token
+     */
     static forRoot(token) {
         return {
             module: TelegramErrorHandlerModule_1,

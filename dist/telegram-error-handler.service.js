@@ -25,6 +25,11 @@ let TelegramErrorHandlerService = class TelegramErrorHandlerService {
             },
         });
     }
+    /**
+     * Reports an error to Your Telegram using the configured Axios instance.
+     * @param e The error to be reported.
+     * @returns A promise that resolves to a string confirming the error was reported.
+     */
     async report(e) {
         return await this.axiosInstance.post('/messenger', {
             error: e,
